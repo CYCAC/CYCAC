@@ -26,7 +26,7 @@ def yaml_parser(yml_filename):
     #yml_filename = "%s/%s.yml" % (settings.StateFileBaseDir,yml_filename)
     try:
         yaml_file = open(yml_filename,'r')
-        data = yaml.load(yaml_file)
+        data = yaml.load(yaml_file,Loader)
         return data
     except Exception as e:
         print_err(e)
